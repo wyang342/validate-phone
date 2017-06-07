@@ -22,22 +22,22 @@ end
 
 describe "#get_all_phone_numbers" do
   it "returns all phone numbers if the string has any phone numbers" do
-    expect(get_all_phone_numbers numbers("234-609-1422, 350-802-0744, 123-603-8762")).to eq(["234-609-1422", "350-802-0744", "123-603-8762"])
+    expect(get_all_phone_numbers("234-609-1422, 350-802-0744, 123-603-8762")).to eq(["234-609-1422", "350-802-0744", "123-603-8762"])
   end
 
   it "get_all_phone_numbers numbers returns an empty Array if it doesn't have any phone numbers" do
-    expect(get_all_phone_numbers numbers("please confirm your phone number: XXX-XXX-1422")).to eq([])
+    expect(get_all_phone_numbers("please confirm your phone number: XXX-XXX-1422")).to eq([])
   end
 end
 
 describe "#hide_phone_numbers numbers" do
   it "obfuscates any phone numbers in the string" do
-    expect(hide_phone_numbers numbers("234-620-1422, 350-830-0744, 123-603-8762")).to eq("XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762")
+    expect(hide_phone_numbers("234-620-1422, 350-830-0744, 123-603-8762")).to eq("XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762")
   end
 
   it "does not alter a string without phone numbers in it" do
     string = "please confirm your phone number: XXX-XXX-1422"
-    expect(hide_phone_numbers numbers(string)).to eq(string)
+    expect(hide_phone_numbers(string)).to eq(string)
   end
 end
 
