@@ -47,7 +47,7 @@ describe "#format_phone_number" do
   end
 
   it "does not alter a string without phone numbers in it" do
-    string = "please confirm your phone number: 4421142233"
+    string = "please confirm your phone number: 421142233"
     expect(format_phone_number(string)).to eq(string)
   end
 end
