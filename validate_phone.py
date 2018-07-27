@@ -9,7 +9,7 @@ def get_phone_number(string):
 
 # Gets and returns all phone numbers from an inputed string
 def get_all_phone_numbers(string):
-    return []
+    return '?'
 
 
 # Hide all numbers in a phone number except the last 4 digits. An example of this looks like: xxx-xxx-1234
