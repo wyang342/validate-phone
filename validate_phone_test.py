@@ -1,5 +1,5 @@
 import unittest
-from validate_phone import has_phone_number, get_phone_number, get_all_phone_numbers, hide_phone_numbers, format_phone_number
+from validate_phone import *
 
 class TestValidatePhone(unittest.TestCase):
 
@@ -22,6 +22,6 @@ class TestValidatePhone(unittest.TestCase):
     def test_format_phone_number(self):
         self.assertEqual(format_phone_number("3112223333, 350.820.0744, 123-630-8762"), "311-222-3333, 350-820-0744, 123-630-8762")
         self.assertEqual(format_phone_number("please confirm your phone number: 421142233"), "please confirm your phone number: 421142233")
-        
+
 if __name__ == '__main__':
     unittest.main()
