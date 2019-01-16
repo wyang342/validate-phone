@@ -14,13 +14,13 @@ with description('#get_phone_number') as self:
 
 with description('#get_all_phone_numbers') as self:
     with it('finds the correct string'):
-        expect(has_phone_number("234-609-1422, 350-802-0744,123-603-8762")).to(equal(["234-609-1422", "350-802-0744", "123-603-8762"]))
-        expect(has_phone_number("please confirm your phone number: XXX-XXX-1422")).to(equal([]))
+        expect(get_all_phone_numbers("234-609-1422, 350-802-0744,123-603-8762")).to(equal(["234-609-1422", "350-802-0744", "123-603-8762"]))
+        expect(get_all_phone_numbers("please confirm your phone number: XXX-XXX-1422")).to(equal([]))
 
 with description('#hide_phone_number') as self:
     with it('finds the correct string'):
-        expect(has_phone_number("234-620-1422, 350-830-0744, 123-603-8762")).to(equal("XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762"))
-        expect(has_phone_number("please confirm your phone number: XXX-XXX-1422")).to(equal("please confirm your phone number: XXX-XXX-1422"))
+        expect(hide_phone_number("234-620-1422, 350-830-0744, 123-603-8762")).to(equal("XXX-XXX-1422, XXX-XXX-0744, XXX-XXX-8762"))
+        expect(hide_phone_number("please confirm your phone number: XXX-XXX-1422")).to(equal("please confirm your phone number: XXX-XXX-1422"))
 
 with description('#format_phone_number') as self:
     with it('finds the correct string'):
