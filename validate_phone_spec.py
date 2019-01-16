@@ -1,5 +1,5 @@
 from mamba import description, context, it
-from expects import expect, equal
+from expects import expect, equal, be_true, be_false
 from validate_phone import *
 
 with description('#has_phone_number') as self:
