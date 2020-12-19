@@ -12,7 +12,7 @@ def get_all_phone_numbers(input_string):
     pass
 
 
-# Hide all numbers in a phone number except the last 4 digits. An example of this looks like: xxx-xxx-1234
+# Hide all numbers in a phone number except the last 4 digits. An example of this looks like: XXX-XXX-1234
 def hide_phone_numbers(input_string):
     pass
 
