@@ -34,7 +34,7 @@ class ValidatePhoneTestCases(unittest.TestCase):
     
     def test_format_phone_number(self):
         """When you call format_phone_number(), it formats all the phone numbers"""
-        self.assertEqual(format_phone_number("3112223333, 350.820.0744, 123-630-8762"), '311-222-3333, 350-820-0744, 123-630-8762')
+        self.assertEqual(format_phone_number("(312) 454.9323, 3112223333, 350.820.0744, 123-630-8762"), '312-454-9323, 311-222-3333, 350-820-0744, 123-630-8762')
 
 if __name__ == '__main__':
     unittest.main()
